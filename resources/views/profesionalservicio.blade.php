@@ -1,6 +1,6 @@
 @extends("layouts.app")
 @section('content')
-{{dd($servicios)}}
+<!-- {{dd($servicios)}} -->
 @if(count($servicios)>0)
 <div class="row justify-content-center">
 <table class="table table-bordered border-primary ">

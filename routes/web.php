@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ServicioController;
 use App\Http\Controllers\ProfesionalController;
+use App\Http\Controllers\ReservaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -35,3 +36,6 @@ Route::get('profesional/registroservicio',function(){
 });
 
 Route::get('profesional/mostrarservicios/{id}',[ProfesionalController::class,'mostrarservicios']);
+
+Route::post('servicios/mostrar/reservas',[ReservaController::class,'reserva'])->name('reserva');
+Route::get('servicios/reservas/carrito',[ReservaController::class,'mostrar']);
