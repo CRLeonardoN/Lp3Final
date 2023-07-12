@@ -1,5 +1,5 @@
 <?php
-
+use Illuminate\Auth\Middleware\Authenticate;
 use App\Http\Controllers\ServicioController;
 use App\Http\Controllers\ProfesionalController;
 use App\Http\Controllers\ReservaController;
@@ -34,8 +34,9 @@ Route::get('profesional/servicios',[ProfesionalController::class,'servicios']);
 Route::get('profesional/registroservicio',function(){
     return view('registroservicio');
 });
+Route::post('profesional/registroservicio/registro',[ServicioController::class,'registrar']);
 
-Route::get('profesional/mostrarservicios/{id}',[ProfesionalController::class,'mostrarservicios']);
-
+Route::get('profesional/mostrarservicios/{profesional_id}',[ServicioController::class,'mostrarservicios']);
+// /{profesional_id}
 Route::post('servicios/mostrar/reservas',[ReservaController::class,'reserva'])->name('reserva');
 Route::get('servicios/reservas/carrito',[ReservaController::class,'mostrar']);

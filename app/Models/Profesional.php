@@ -7,6 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Profesional extends Model
 {
+    
     use HasFactory;
     public $timestamps = false;
+    
+    protected $table = "profesionals";
 }

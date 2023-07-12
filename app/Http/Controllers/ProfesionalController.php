@@ -30,9 +30,9 @@ class ProfesionalController extends Controller
 
         return redirect('/profesional')->with('success', 'guardado');
     }
-    public function mostrarservicios(int $profesional_id){
-        $servicio= Servicio::find($profesional_id);
-        return view("profesionalservicio")->with("servicios",$servicio);
+    // public function mostrarservicios(int $profesional_id){
+    //     $servicios= Servicio::find($profesional_id);
+    //     return view("promostrar")->with("servicios",$servicios);
 
-    }
+    // }
 }

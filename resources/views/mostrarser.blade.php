@@ -1,7 +1,5 @@
-
 @extends("layouts.app")
 @section('content')
-<!-- {{dd($servicios)}} -->
 @if(count($servicios)>0)
 @foreach($servicios as $servicio)
 <div class="col-lg-3">
@@ -26,21 +24,14 @@
         </div>
     </div>
 </div>
-
-<!-- <div class="container">
-<div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title">{{$servicio["nombre"]}}</h5>
-    <h6 class="card-subtitle mb-2 text-body-secondary">{{$servicio["precio"]}}</h6>
-    <p class="card-text">{{$servicio["detalle"]}}</p>
-    <a href="detalle/{{$servicio['id']}}" class="btn btn-success">Agregar al Carrito</a>
-    </div>
-</div>
-</div> -->
 @endforeach
 @else
 <div class="row justify-content-center">
     <h2>No hay resultados</h2>
 </div>
 @endif 
+<?php
+echo 'Hola'
+?>
+
 @endsection
