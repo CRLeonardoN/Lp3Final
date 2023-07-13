@@ -21,7 +21,6 @@ class ServicioController extends Controller
             'nombre' => 'required',
             'precio' => 'required',
             'detalle' => 'required',
-            'servicio' => 'required',
         ]);
         $ser = new Servicio();
         $ser->nombre = $request->input('nombre');
@@ -29,6 +28,7 @@ class ServicioController extends Controller
         $ser->numero = $request->input('servicio');
 
         $ser->save();
+        return view("/promostrar")->with("servicios", $servicios);
     }
 
     public function mostrarservicios(){

@@ -34,7 +34,7 @@ Route::get('profesional/servicios',[ProfesionalController::class,'servicios']);
 Route::get('profesional/registroservicio',function(){
     return view('registroservicio');
 });
-Route::post('profesional/registroservicio/registro',[ServicioController::class,'registrar']);
+Route::post('profesional/registroservicio/registro',[ServicioController::class,'registrar'])->name('registroservicio');
 
 Route::get('profesional/mostrarservicios/{profesional_id}',[ServicioController::class,'mostrarservicios']);
 // /{profesional_id}

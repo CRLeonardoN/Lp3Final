@@ -1,7 +1,7 @@
 @extends("layouts.app")
 @section('content')
 
-<form action='profesional/registrarservicio' method="POST">
+<form action='{{ route('registroservicio') }}' method="POST">
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Nombre del Servicio</label>
     <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
